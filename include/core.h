@@ -24,10 +24,17 @@ namespace physicEngine{
          real squareMagnitude();
          void normalize();
          void operator*=(real);
-         Vector3 operator*(real);
-         void operator+=(Vector3 &);
-         Vector3 operator+(Vector3 &);
-         void operator-=(Vector3 &);
+         Vector3 operator*(real) const;
+         void operator+=(const Vector3 &);
+         Vector3 operator+(const Vector3 &) const;
+         void operator-=(const Vector3 &);
+         Vector3 operator-(const Vector3 &) const ;
+         void addScaledVecror(const Vector3 &, real);
+         Vector3 componentProduct(const Vector3 &) const;
+         real scalarProduct(const Vector3 &vector) const;
+         real operator*(const Vector3 &) const;
+         Vector3 vectorProduct(const Vector3 &vector) const;
+         void operator%=(const Vector3&);
      };
 }
 #endif //PROJECT_CORE_H
