@@ -74,7 +74,7 @@ Vector3 Vector3::operator-(const Vector3 &v) const {
     return Vector3(x-v.x, y-v.y, z-v.z);
 }
 
-void Vector3::addScaledVecror(const Vector3 &vector, const real scale) {
+void Vector3::addScaledVector(const Vector3 &vector, const real scale) {
     x += vector.x * scale;
     y += vector.y * scale;
     z += vector.z * scale;
@@ -85,11 +85,11 @@ Vector3 Vector3::componentProduct(const Vector3 &vector) const {
 }
 
 real Vector3::scalarProduct(const Vector3 &vector) const {
-    return x*vector.x + y*vector.y, z*vector.z;
+    return x*vector.x + y*vector.y + z*vector.z;
 }
 
 real Vector3::operator*(const Vector3 &vector) const {
-    return x*vector.x + y*vector.y, z*vector.z;
+    return x*vector.x + y*vector.y + z*vector.z;
 }
 
 Vector3 Vector3::vectorProduct(const Vector3 &vector) const {

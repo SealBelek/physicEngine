@@ -8,10 +8,11 @@
 #include "precision.h"
 
 namespace physicEngine{
-    /**
-     * вектор в 3 мерного измерения
-     */
+
      class Vector3
+         /**
+          * вектор в 3 мерного измерения
+           */
      {
          real x;
          real y;
@@ -28,8 +29,8 @@ namespace physicEngine{
          void operator+=(const Vector3 &);
          Vector3 operator+(const Vector3 &) const;
          void operator-=(const Vector3 &);
-         Vector3 operator-(const Vector3 &) const ;
-         void addScaledVecror(const Vector3 &, real);
+         Vector3 operator-(const Vector3 &) const;
+         void addScaledVector(const Vector3 &, real);
          Vector3 componentProduct(const Vector3 &) const;
          real scalarProduct(const Vector3 &vector) const;
          real operator*(const Vector3 &) const;
