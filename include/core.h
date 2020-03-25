@@ -36,7 +36,9 @@ namespace physicEngine{
          real operator*(const Vector3 &) const;
          Vector3 vectorProduct(const Vector3 &vector) const;
          void operator%=(const Vector3&);
-         Vector3 operator%(const Vecotr3 &vector) const;
+         Vector3 operator%(const Vector3 &vector) const;
+         void setVector(const real,const real, const real);
+         void clear();
      };
 }
 #endif //PROJECT_CORE_H

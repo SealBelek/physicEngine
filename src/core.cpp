@@ -108,4 +108,14 @@ Vector3 Vector3::operator%(const Vector3 &vector) const {
             x*vector.y - y*vector.x);
 }
 
+void Vector3::setVector(const real newX, const real newY, const real newZ) {
+    x = newX;
+    y = newY;
+    z = newZ;
+}
+
+void Vector3::clear() {
+    x = y = z = 0;
+}
+
 

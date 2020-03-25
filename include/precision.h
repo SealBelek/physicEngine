@@ -6,6 +6,7 @@
 #define PROJECT_PRECISION_H
 
 #include <cmath>
+#include <cfloat>
 
 namespace physicEngine{
     /**
@@ -15,5 +16,6 @@ namespace physicEngine{
 
 #define real_sqrt sqrt
 #define real_pow pow
+#define REAL_MAX DBL_MAX
 }
 #endif //PROJECT_PRECISION_H

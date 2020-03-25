@@ -24,6 +24,27 @@ namespace physicEngine{
 
     public:
         void integrate(real);
+        void setMass(const real);
+        real getMass() const;
+        void setInverseMass(const real);
+        real getInverseMass() const;
+        bool hasFiniteMass() const;
+        void setDamping(const real);
+        real getDamping() const;
+        void setPosition(const Vector3 &);
+        void setPosition(const real, const real, const real);
+        void getPosition(Vector3 *) const;
+        Vector3 getPosition() const;
+        void setVelocity(const Vector3 &);
+        void setVelocity(const real, const real, const real);
+        void getVelocity(Vector3 *) const;
+        Vector3 getVelocity() const;
+        void setAcceleration(const Vector3 &);
+        void setAcceleration(const real, const real, const real);
+        void getAcceleration(Vector3 *) const;
+        Vector3 getAcceleration() const;
+        void clearAccumulator();
+        void addForce(const Vector3 &)
     };
 }
 
