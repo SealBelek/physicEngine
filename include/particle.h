@@ -44,7 +44,7 @@ namespace physicEngine{
         void getAcceleration(Vector3 *) const;
         Vector3 getAcceleration() const;
         void clearAccumulator();
-        void addForce(const Vector3 &)
+        void addForce(const Vector3 &);
     };
 }
 

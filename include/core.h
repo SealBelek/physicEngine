@@ -39,6 +39,9 @@ namespace physicEngine{
          Vector3 operator%(const Vector3 &vector) const;
          void setVector(const real,const real, const real);
          void clear();
+         real getX();
+         real getY();
+         real getZ();
      };
 }
 #endif //PROJECT_CORE_H

@@ -118,4 +118,16 @@ void Vector3::clear() {
     x = y = z = 0;
 }
 
+real Vector3::getX() {
+    return x;
+}
+
+real Vector3::getY() {
+    return y;
+}
+
+real Vector3::getZ() {
+    return z;
+}
+
 
