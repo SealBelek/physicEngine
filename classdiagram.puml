@@ -1,0 +1,104 @@
+@startuml
+
+BallisticDemo <|-- Application
+BallisticDemo *--> ShortType
+BallisticDemo *--> AmmoRound
+ShortType --* AmmoRound
+
+
+namespace physicEngine{
+Vector3 --* Particle
+Particle --* .AmmoRound
+
+}
+
+class Application {
+    #int heigh
+    #int width
+    {abstract} +getTitle()
+    {abstract} +initGraphics()
+    {abstract} +setView()
+    {abstract} +deinit()
+    {abstract} +display()
+    {abstract} +update()
+    {abstract} +key()
+    {abstract} +resize()
+    {abstract} +mouse()
+    {abstract} +mouseDrag()
+    +renderText()
+}
+
+enum ShortType{
+    UNUSED
+    PISTOL
+    ARTILLERY
+    FIREBALL
+    LASER
+}
+
+class AmmoRound <<(s, #FF7700) stuct>>{
+    particle : Particle
+    type : ShortType
+    unsigned startTime
+    render()
+}
+
+class BallisticDemo{
+    -{static} unsigned ammoRounds
+    -ammo[ammoRounds] : AmmoRound
+    -currentShotType : ShortType
+    - fire()
+    +BallisticDemo()
+    {abstract}+getTitle()
+    {abstract}+update()
+    {abstract}+display()
+    {abstract}+mouse()
+    {abstract}key()
+}
+
+class physicEngine.Vector3{
+    -real x
+    -real y
+    -real z
+    +Vector3()
+    +invert()
+    +magnitude()
+    +squareMagnitude()
+    +normalize()
+    +addScaledVector()
+    +componentProduct()
+    +scalarProduct()
+    +vectorProduct()
+    +setVector()
+    +clear()
+    +getX()
+    +getY()
+    +getZ()
+}
+
+class physicEngine.Particle{
+    -position : Vector3
+    -velociry : Vector3
+    -acceleration : Vector3
+    -forceAccum : Vector3
+    -real damping
+    -real inverseMass
+    +integrate()
+    +setMass()
+    +getMass()
+    +setInverseMass()
+    +getInverseMass()
+    +hasFiniteMass()
+    +setDamping()
+    +getDamping()
+    +setPosition()
+    +getPosition()
+    +setVelocity()
+    +getVelocity()
+    +setAcceleration()
+    +getAcceleration()
+    +clearAccumulator()
+    +addForce()
+}
+
+@enduml

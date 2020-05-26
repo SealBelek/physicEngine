@@ -35,7 +35,7 @@ void Application::display()
 
 const char* Application::getTitle()
 {
-    return "Cyclone Demo";
+    return "Physic Demo";
 }
 
 void Application::deinit()

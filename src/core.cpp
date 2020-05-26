@@ -8,7 +8,7 @@
 using namespace physicEngine;
 
 Vector3::Vector3(): x(0), y(0), z(0){}
-Vector3::Vector3(const physicEngine::real x, const physicEngine::real y, const physicEngine::real z): x(x), y(y), z(z) {}
+Vector3::Vector3(const real x, const real y, const real z): x(x), y(y), z(z) {}
 
 void Vector3::invert() {
     /**
